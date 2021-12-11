@@ -1,4 +1,3 @@
-import { useSelector } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Sidebar from "./components/sidebar/Sidebar";
@@ -13,14 +12,14 @@ import User from "./pages/user/User";
 import UserList from "./pages/userList/UserList";
 
 function App() {
-  const admin = useSelector((state) => state.user.currentUser.isAdmin);
+  // const admin = useSelector((state) => state.user.currentUser.isAdmin);
   return (
     <Router>
       <Switch>
         <Route path="/login">
           <Login />
         </Route>
-        {admin && (
+        {/* {admin && ( */}
           <>
         <Topbar />
         <div className="container">
@@ -49,7 +48,7 @@ function App() {
           </Route>
         </div>
         </>
-        )}
+        {/* )} */}
       </Switch>
     </Router>
   );
